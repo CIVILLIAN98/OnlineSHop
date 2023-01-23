@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.ant-drawer-title {
+  text-align: center;
+  font-size: 32px;
+  color: brown;
+}
+.ant-drawer-body {
+  margin: 0;
+  padding: 0;
+  background-color: purple;
+}
