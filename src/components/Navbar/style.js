@@ -7,11 +7,11 @@ const Container = styled.div`
   border-bottom: 1px solid yellow;
   margin-bottom: 10px;
 `;
-Container.drawerimg = styled.img`
+Container.Drawerimg = styled.img`
   width: 100px;
   height: 100px;
 `;
-Container.basket = styled.div`
+Container.Basket = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,7 +52,7 @@ const Kart = styled.div`
     cursor: pointer;
   }
 `;
-Kart.title = styled.p`
+Kart.Title = styled.p`
   font-size: 20px;
   color: gold;
 `;

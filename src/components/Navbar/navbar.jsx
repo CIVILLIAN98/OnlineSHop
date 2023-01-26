@@ -6,7 +6,6 @@ import { Context } from "../../context/context";
 
 const Navbar = () => {
   const [state, dispatch] = useContext(Context);
-
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -19,7 +18,7 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Logo>Simple-ecart</Logo>
-        <p>HELLO WORLD</p>
+
         <Kart>
           <p onClick={showDrawer}>cart ({state.cart.length})</p>
         </Kart>
@@ -31,11 +30,11 @@ const Navbar = () => {
           open={open}
           getContainer={false}
         >
-          {state?.cart?.map((product, index) => {
+          {state?.cart?.map((product) => {
             return (
-              <Container.basket key={index}>
-                <Container.drawerimg src={product.img} />
-                <Kart.title>
+              <Container.Basket key={product.id}>
+                <Container.Drawerimg src={product.img} />
+                <Kart.Title>
                   {product.name}-{product?.price * product.count}$
                   <button
                     onClick={() =>
@@ -52,7 +51,7 @@ const Navbar = () => {
                   >
                     -
                   </button>
-                </Kart.title>
+                </Kart.Title>
                 <button
                   style={{ fontSize: "18px" }}
                   onClick={() =>
@@ -61,9 +60,9 @@ const Navbar = () => {
                 >
                   Delete
                 </button>
-              </Container.basket>
+              </Container.Basket>
             );
-          })}{" "}
+          })}
         </Drawer>
       </Wrapper>
     </Container>
