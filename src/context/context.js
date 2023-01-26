@@ -62,14 +62,9 @@ const Contextprovider = ({ children }) => {
         default:
           return state;
       }
-    },
-    { product: Mock, cart: [] }
-    // localStorage.getItem("state")
-    //   ? JSON.parse(localStorage.getItem("state"))
-    //   : { product: Mock, cart: [] }
-  );
+    },localStorage.getItem("state") ? JSON.parse(localStorage.getItem("state")) : {product: Mock, cart: [] });
   localStorage.setItem("state", JSON.stringify(state));
-  // localStorage.removeItem("state")
+  
   return (
     <Context.Provider value={[state, dispatch]}>{children}</Context.Provider>
   );
